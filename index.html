@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IS DATA EPHEMERAL?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --accent: #21fc0d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      margin: 10px; /* minimal margin */
+    }
+
+    /* TITLE --------------------------- */
+    #title {
+      width: 100%;
+      font-family: Arial, sans-serif;
+      font-size: clamp(60px, 9vw, 175px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-align: center;
+      line-height: 1.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin: 10px 0 20px 0;
+    }
+
+    /* HERO VIDEO ---------------------- */
+    .video-wrapper {
+      width: 100%;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    .audio-toggle {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      background: rgba(0, 0, 0, 0.65);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+    }
+
+    /* INFO ---------------------------- */
+    .info {
+      margin: 20px 0;
+      max-width: 600px;
+    }
+
+    .info-title {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+
+.info-body {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  opacity: 0.9;
+  margin-bottom: 1.4rem; /* slightly more breathing room */
+}
+
+    /* GRID ---------------------------- */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .media-item {
+      border: 1px solid var(--accent); /* thin green border */
+      padding: 4px;
+    }
+
+    .media-item video,
+    .media-item img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Green filename label */
+    .filename {
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-top: 6px;
+      font-family: monospace;
+    }
+
+    @media (max-width: 900px) {
+      .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TITLE -->
+  <h1 id="title">IS DATA EPHEMERAL?</h1>
+
+  <!-- HERO VIDEO -->
+  <div class="video-wrapper">
+    <video
+      id="mainVideo"
+      src="media/main-video.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+
+    <button id="audioToggle" class="audio-toggle">Unmute</button>
+  </div>
+
+  <!-- INFO -->
+  <section class="info">
+    <div class="info-title">About</div>
+
+    <p class="info-body">
+      A flower—an ephemeral existence, destined to fade. Yet, we, in our hubris, believe we can conquer time itself. We capture the moment, freezing it in a digital frame. But is this truly preservation, or merely a digital mausoleum?
+    </p>
+
+    <p class="info-body">
+      In an era where information is no longer bound by physical constraints, our obsession with the tangible has shifted towards the intangible. A single click can capture a moment, a thought, or a piece of history into countless digital artifacts and preserve it in the realm of the digital.
+    </p>
+
+    <p class="info-body">
+      Like a flower, a digital file blooms into existence, yet, beneath the illusion of permanence and the realm of ones and zeros, the march of time continues. Our digital data, once vibrant and alive, is susceptible to volatility. The once pristine image, the crisp audio recording, the eloquent text—all succumb to the relentless passage of time. Hardware fails, software becomes obsolete, and file formats disappear into the digital abyss.
+    </p>
+
+    <p class="info-body">
+      IS&nbsp;&nbsp;DATA&nbsp;&nbsp;EPHEMERAL? delves into the darker side of the digital age, exposing the fragility of our digital heritage. It is a plea to future generations to remember the digital ghosts of the past and a critique of our obsession with the new, our disregard for the old, and our failure to recognize the impermanence of our digital creations.
+    </p>
+  </section>
+
+  <!-- FLOWER GRID ROW 1 -->
+  <section class="media-grid">
+    <div class="media-item">
+      <video src="media/flower-0.mp4" autoplay loop muted playsinline></video>
+      <div class="filename">flower-0.mp4</div>
+    </div>
+
+    <div class="media-item">
+      <video src="media/flower-1.mp4" autoplay loop muted playsinline></video>
+      <div class="filename">flower-1.mp4</div>
+    </div>
+
+    <div class="media-item">
+      <video src="media/flower-2.mp4" autoplay loop muted playsinline></video>
+      <div class="filename">flower-2.mp4</div>
+    </div>
+  </section>
+
+  <!-- FLOWER GRID ROW 2 -->
+  <section class="media-grid">
+    <div class="media-item">
+      <video src="media/flower-3.mp4" autoplay loop muted playsinline></video>
+      <div class="filename">flower-3.mp4</div>
+    </div>
+
+    <div class="media-item">
+      <video src="media/flower-4.mp4" autoplay loop muted playsinline></video>
+      <div class="filename">flower-4.mp4</div>
+    </div>
+
+    <div class="media-item">
+      <video src="media/flower-5.mp4" autoplay loop muted playsinline></video>
+      <div class="filename">flower-5.mp4</div>
+    </div>
+  </section>
+
+  <!-- FLOWER GRID ROW 3 -->
+  <section class="media-grid">
+    <div class="media-item">
+      <video src="media/flower-6.avi" autoplay loop muted playsinline></video>
+      <div class="filename">flower-6.avi</div>
+    </div>
+
+    <div class="media-item">
+      <video src="media/flower-7.avi" autoplay loop muted playsinline></video>
+      <div class="filename">flower-7.avi</div>
+    </div>
+
+    <div class="media-item">
+      <video src="media/flower-8.avi" autoplay loop muted playsinline></video>
+      <div class="filename">flower-8.avi</div>
+    </div>
+  </section>
+
+  <!-- FLOWER GRID ROW 4 -->
+  <section class="media-grid">
+    <div class="media-item">
+      <video src="media/flower-9.AVI" autoplay loop muted playsinline></video>
+      <div class="filename">flower-9.AVI</div>
+    </div>
+  </section>
+
+  <!-- AUDIO TOGGLE SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const mainVideo = document.getElementById("mainVideo");
+      const toggle = document.getElementById("audioToggle");
+
+      // Ensure autoplay-compatible start
+      mainVideo.muted = true;
+      mainVideo.volume = 1;
+
+      toggle.addEventListener("click", async () => {
+        try {
+          if (mainVideo.muted) {
+            mainVideo.muted = false;
+            mainVideo.volume = 1;
+            await mainVideo.play();
+            toggle.textContent = "Mute";
+          } else {
+            mainVideo.muted = true;
+            mainVideo.volume = 0;
+            toggle.textContent = "Unmute";
+          }
+        } catch (err) {
+          console.log("Playback error:", err);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
